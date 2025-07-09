@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </button>
+    <div class="container">
+        <h1>Movie Recommender System</h1>
+        <div class="search-container">
+            <input type="text" id="movie-search" placeholder="Enter a movie title">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="search-results" class="results-container hidden"></div>
+        <div id="recommendations" class="results-container hidden"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
